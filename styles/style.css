@@ -212,7 +212,7 @@
   line-height: 25px;
   text-align: center;
 }
-/* ------------------------------------------------------Декоративный элемент сверху*/
+/* ------------------------------------------------------Декоративный элемент снизу*/
 .decorated-zone::after {
   content: "";
   position: absolute;
@@ -225,10 +225,8 @@
   border-width: 0px 0px 1px 1px;
   border-style: solid;
   border-color: var(--accent-color);
-  border-bottom-width: 1px;
-  border-left-width: 1px;
 }
-/* ------------------------------------------------------Декоративный элемент снизу*/
+/* ------------------------------------------------------Декоративный элемент сверху*/
 .decorated-zone::before {
   content: "";
   position: absolute;
@@ -241,8 +239,6 @@
   border-width: 1px 1px 0px 0px;
   border-style: solid;
   border-color: var(--accent-color);
-  border-bottom-width: 1px;
-  border-left-width: 1px;
 }
 /* ------------------------------------------------------Декоративный элемент справа от текста*/
 .decorated-text::before {
