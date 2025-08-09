@@ -8,8 +8,14 @@
   /* Цвета. Темная тема*/
   --accent-color: #ff0070;
   --primary-color: #db00ff;
+  --menu-color: #ff0070;
+  --menu-color-hover: rgb(255, 0, 112, 0.4);
   --text-color: #f1b2ce;
   --background-color: #000028;
+  --card-name-color: #ff0070;
+  --link-shadow-color: #ff0070;
+  --title-decor-color: #000028;
+  --decorated-zone-color: #ff0070;
   --font-family: IBM Plex Mono;
   --font-weight: 400;
   --font-weight-accent: 700;

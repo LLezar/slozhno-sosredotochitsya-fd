@@ -32,7 +32,7 @@
 .header__theme-menu-item {
   width: 70px;
   height: 26px;
-  color: var(--accent-color);
+  color: var(--menu-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   font-size: 18px;
@@ -53,7 +53,7 @@
 }
 /* ------------------------------------------------------Активная кнопка меню*/
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--menu-color);
   pointer-events: none;
 }
 /* ------------------------------------------------------Блок заголовка*/
@@ -95,7 +95,7 @@
 }
 /* ------------------------------------------------------Имя карточки*/
 .card-name {
-  color: var(--accent-color);
+  color: var(--card-name-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight-accent);
   font-size: 18px;
@@ -135,7 +135,7 @@
   outline: none;
   color: inherit;
   text-decoration: none;
-  text-shadow: 2px 1px var(--accent-color);
+  text-shadow: 2px 1px var(--link-shadow-color);
 }
 /* ------------------------------------------------------Блок с картинками*/
 .block-image {
@@ -181,7 +181,7 @@
 /* ------------------------------------------------------Оформление заголовков*/
 .title-decor {
   display: block;
-  color: var(--background-color);
+  color: var(--title-decor-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight-accent);
   font-size: 18px;
@@ -204,7 +204,7 @@
   align-items: end;
   /* Ширина текста + расстояние до точки  + ширина точки + расстояние до уголка + переменная отступа от края */
   width: calc(33px + 10px + 9px + 9px + var(--padding-small));
-  height: calc(26px + var(--padding-small));
+  padding-top: var(--padding-large); 
   color: var(--accent-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -224,7 +224,7 @@
   margin-left: 10px;
   border-width: 0px 0px 1px 1px;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--decorated-zone-color);
 }
 /* ------------------------------------------------------Декоративный элемент сверху*/
 .decorated-zone::before {
@@ -238,7 +238,7 @@
   margin-right: 10px;
   border-width: 1px 1px 0px 0px;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--decorated-zone-color);
 }
 /* ------------------------------------------------------Декоративный элемент справа от текста*/
 .decorated-text::before {
@@ -255,16 +255,15 @@
 }
 /* ------------------------------------------------------Пункт меню при наведении*/
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color);
-  opacity: 0.4;
+  border: 1px solid var(--menu-color-hover); 
 }
 /* ------------------------------------------------------Пункт меню при фокусе*/
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--menu-color);
 }
 /* ------------------------------------------------------Ссылка при наведении*/
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--text-color);
   text-decoration-color: var(--text-color);
   text-decoration-style: solid;
 }
@@ -303,17 +302,17 @@
     gap: 80px;
     padding: 60px var(--padding-large) 0;
   }
-  /* ------------------------------------------------------Блок с текстовым контентом (нечётные)*/
-  .main .block:nth-child(2n + 1) {
+  /* ------------------------------------------------------Блок с текстовым контентом (1 и 3)*/
+  .block-column {
     grid-template-columns: 1fr 2fr;
   }
   /* ------------------------------------------------------Имя карточки*/
-  /* ------------------------------------------------------Имя карточки (чётное)*/
-  .main .block:nth-child(2n) .card-name {
+  /* ------------------------------------------------------Имя карточки (блока 2)*/
+  .block-accent .card-name {
     width: 25%;
   }
-  /* ------------------------------------------------------Нечётные блоки текстового контента (вторая колонка)*/
-  .main .block:nth-child(2n + 1) .block-context {
+  /* ------------------------------------------------------Блоки 1 и 2 текстового контента (вторая колонка)*/
+  .block-column .block-context {
     grid-column: 2;
   }
   /* ------------------------------------------------------Выделенный контекст карточки*/
@@ -369,7 +368,7 @@
   /* ------------------------------------------------------Текст в декоративном блоке*/
   .decorated-text {
     width: calc(33px + 10px + 9px + 9px + var(--padding-large));
-    height: calc(26px + var(--padding-large));
+    padding-top: var(--padding-large); 
   }
   /* ------------------------------------------------------Декоративный элемент сверху*/
   .decorated-zone::after {
@@ -415,12 +414,12 @@
     display: grid;
     gap: 10px;
   }
-  /* ------------------------------------------------------Четные блоки с текстовым контентом*/
-  .main .block:nth-child(2n) {
+  /* ------------------------------------------------------Второй блоки с текстовым контентом*/
+  .block-accent {
     gap: 20px;
   }
-  /* ------------------------------------------------------Имя карточки в четных блоках*/
-  .main .block:nth-child(2n) .card-name {
+  /* ------------------------------------------------------Имя карточки второго блока*/
+  .block-accent .card-name {
     width: 33%;
   }
   /* ------------------------------------------------------Выделенный контекст карточки*/
