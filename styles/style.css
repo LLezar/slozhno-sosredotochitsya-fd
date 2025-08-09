@@ -204,7 +204,7 @@
   align-items: end;
   /* Ширина текста + расстояние до точки  + ширина точки + расстояние до уголка + переменная отступа от края */
   width: calc(33px + 10px + 9px + 9px + var(--padding-small));
-  padding-top: var(--padding-large); 
+  padding-top: var(--padding-large);
   color: var(--accent-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -255,7 +255,7 @@
 }
 /* ------------------------------------------------------Пункт меню при наведении*/
 .header__theme-menu-button:hover {
-  border: 1px solid var(--menu-color-hover); 
+  border: 1px solid var(--menu-color-hover);
 }
 /* ------------------------------------------------------Пункт меню при фокусе*/
 .header__theme-menu-button:focus-visible {
@@ -368,7 +368,7 @@
   /* ------------------------------------------------------Текст в декоративном блоке*/
   .decorated-text {
     width: calc(33px + 10px + 9px + 9px + var(--padding-large));
-    padding-top: var(--padding-large); 
+    padding-top: var(--padding-large);
   }
   /* ------------------------------------------------------Декоративный элемент сверху*/
   .decorated-zone::after {
