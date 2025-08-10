@@ -103,11 +103,6 @@
   letter-spacing: 0;
   -webkit-leading-trim: none;
 }
-/* ------------------------------------------------------Заголовок карточки*/
-.card-title {
-  display: block;
-  font-weight: var(--font-weight);
-}
 /* ------------------------------------------------------Заголовок карточки (выделенный)*/
 .accent-card-title {
   padding-bottom: 20px;
@@ -204,7 +199,7 @@
   align-items: end;
   /* Ширина текста + расстояние до точки  + ширина точки + расстояние до уголка + переменная отступа от края */
   width: calc(33px + 10px + 9px + 9px + var(--padding-small));
-  padding-top: var(--padding-large);
+  padding-top: var(--padding-small);
   color: var(--accent-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -271,6 +266,11 @@
 .link:focus-visible {
   border: 1px solid var(--text-color);
 }
+/* ------------------------------------------------------Заголовок карточки*/
+.card-title {
+  display: block;
+  font-weight: var(--font-weight);
+}
 /* ------------------------------------------------------Стили для планшета*/
 @media (width >= 768px) {
   /* ------------------------------------------------------Основные стили----------------------------------------------------------------- */
@@ -282,6 +282,10 @@
     align-items: start;
     height: 50%;
     margin-top: auto;
+  }
+  /* ------------------------------------------------------Кнопка меню*/
+  .header__theme-menu-button {
+    padding-bottom: 10px;
   }
   /* ------------------------------------------------------Заголовок*/
   .title {
@@ -303,7 +307,7 @@
     padding: 60px var(--padding-large) 0;
   }
   /* ------------------------------------------------------Блок с текстовым контентом (1 и 3)*/
-  .block-column {
+  .block-dedicated {
     grid-template-columns: 1fr 2fr;
   }
   /* ------------------------------------------------------Имя карточки*/
@@ -312,7 +316,7 @@
     width: 25%;
   }
   /* ------------------------------------------------------Блоки 1 и 2 текстового контента (вторая колонка)*/
-  .block-column .block-context {
+  .block-dedicated .block-context {
     grid-column: 2;
   }
   /* ------------------------------------------------------Выделенный контекст карточки*/
